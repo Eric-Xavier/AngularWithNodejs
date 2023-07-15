@@ -1,7 +1,7 @@
 {
-  "name": "angular-quickstart",
+  "name": "DummyTranning",
   "version": "1.0.0",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "description": "Project created from angular/QuickStart and rewritten to this portal enjoi :D",
   "scripts": {
     "build": "tsc -p src/",
     "build:watch": "tsc -p src/ -w",
