@@ -4,7 +4,6 @@ import { ICourse } from '../interfaces/ICourse';
 @Injectable()
 export class CourseService {
 
-
     public getCourseList(): ICourse[] {
         return [
             { id: 11, description: "Asp.Net MVC", hours: 40 },

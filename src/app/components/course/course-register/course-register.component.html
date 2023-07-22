@@ -1,1 +1,31 @@
-<h1>Course Register</h1>
+<section class="container">
+  <h1>Course Registration</h1>
+  <h3>ID: {{course.id}}</h3>
+  <h3>Description: {{course.description}} </h3>
+  <h3>Hours: {{course.hours}}hs</h3>
+
+  <div class="col-md-12">
+    <div class="form-group">
+      <label for="id">Code:</label>
+      <input type="text" name="id" id="id" value="{{course.id}}" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" name="description" value="{{course.description}}" id="description" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="hours">Hours</label>
+      <input type="number" name="hours" id="hours" value="{{course.hours}}" class="form-control" min-value="1">
+    </div>
+
+    <div class="form-group">
+      <button type="button" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil">&nbsp;</span>
+        Register
+      </button>
+    </div>
+  </div>
+
+</section>

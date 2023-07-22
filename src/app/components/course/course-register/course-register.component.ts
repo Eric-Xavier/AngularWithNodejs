@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { ICourse } from "src/app/interfaces/ICourse";
 
 @Component({
     selector: 'course-register',
@@ -7,5 +8,9 @@ import { Component } from "@angular/core";
 
 export class CourseRegisterComponent
 {
-
+  public course: ICourse = {
+    id : 1,
+    description: "Demonstration",
+    hours: 1
+  }
 }
