@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ICourse } from '../../../interfaces/ICourse'
+import { CourseService } from '../../../services/courses.service'
 
 @Component({
     selector: 'course-list',
@@ -6,9 +8,13 @@ import { Component } from '@angular/core';
 })
 
 export class CourseListComponent {
-    constructor() { }
 
-    
+  public list: ICourse[];
+
+  constructor(courseService:CourseService) {
+    this.list = courseService.getCourseList();
+  }
+
 }
 
 
