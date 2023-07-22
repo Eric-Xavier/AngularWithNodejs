@@ -11,6 +11,8 @@ export class AppMenuComponent {
   public courseListTitle : string = "Courses";
   public registerTitle: string = "Register";
 
+  public masterDetailTitle = "MasterDetail"
+
   public open(value:string){
     console.log(value);
   }

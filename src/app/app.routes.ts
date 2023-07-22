@@ -3,11 +3,13 @@ import { CourseListComponent } from './components/course/course-list/course-list
 import { CourseRegisterComponent } from './components/course/course-register/course-register.component';
 import { NotFoundErrorComponent } from "./components/error/not-found/not-found.component";
 import { HomeComponent } from "./components/home/home.component";
+import { MasterDetailComponent } from "./components/masterdetail/masterdetail.component";
 
 export const appRoutes : Routes = [
     { path:"", component: HomeComponent },
     { path:"register", component: CourseRegisterComponent },
     { path:"list", component: CourseListComponent },
+    { path:"masterdetail", component: MasterDetailComponent },
     { path: "**", component:NotFoundErrorComponent }
 ];
 

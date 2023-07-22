@@ -11,6 +11,7 @@ import { AppMenuComponent } from './components/menu/menu.component';
 import { CourseListComponent } from './components/course/course-list/course-list.component';
 import { CourseRegisterComponent } from './components/course/course-register/course-register.component';
 import { NotFoundErrorComponent } from './components/error/not-found/not-found.component';
+import { MasterDetailComponent} from './components/masterdetail/masterdetail.component'
 
 import { CourseService } from './services/courses.service'
 
@@ -23,6 +24,7 @@ import { CourseService } from './services/courses.service'
     CourseRegisterComponent,
     AppMenuComponent,
     HomeComponent,
+    MasterDetailComponent,
 
     NotFoundErrorComponent
   ],
