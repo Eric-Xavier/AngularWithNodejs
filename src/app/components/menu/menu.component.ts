@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-menu-component',
-  templateUrl: './menu-component.component.html',
-  styleUrls: ['./menu-component.component.css']
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css']
 })
-export class MenuComponentComponent {
+export class AppMenuComponent {
 
   public schoolTitle:string = "Dummy Training";
-  public listTitle : string = "Courses";
+  public courseListTitle : string = "Courses";
   public registerTitle: string = "Register";
 
   public open(value:string){

@@ -1,22 +1,25 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" [routerLink]="['/']">
       <h1>{{schoolTitle}}</h1>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>      
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">{{listTitle}}</a>
+          <a class="nav-link" [routerLink]="['/list']">{{courseListTitle}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">{{registerTitle}}</a>
+          <a class="nav-link" [routerLink]="['/register']">{{registerTitle}}</a>
         </li>
       </ul>
     </div>
