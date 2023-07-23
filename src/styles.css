@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+.badge.badge-primary{
+  background-color: var(--bs-primary);
+  color: var(--bs-light);
+  margin:5px;
+}
+
+.badge.badge-danger{
+  background-color: var(--bs-danger);
+  color: var(--bs-light);
+  margin:5px;
+}
+
+.badge.badge-secondary{
+  background-color: var(--bs-secondary);
+  color: var(--bs-light);
+  margin:5px;
+}
+
+button.btn {
+  margin: 10px 5px;
+}
