@@ -1,0 +1,51 @@
+<section class="container">
+  <h1>Master / Details</h1>
+  <hr />
+
+
+  <div class="row">
+
+    <!--Click event-->
+    <div class="col-md-6">
+      <ul class="list-group"></ul>
+      <li class="list-group-item" *ngFor="let item of courseList" (click)="selectCourse(item)">
+        <span  [class.badge-primary]="item === selectedCourse" [class.badge-secondary]="item !== selectedCourse"      class="badge">{{item.id}}</span>
+        <a [routerLink]="['/masterdetail']">{{item.description}}</a>
+      </li>
+
+      <button id="btnNewCourse" type="button" class="btn btn-primary" (click)="emptyCourse()">
+        <span class="bi bi-file-earmark-plus-fill">&nbsp;</span>
+        New
+      </button>
+
+    </div>
+
+
+    <!--Form-->
+    <div class="col-md-6" *ngIf="selectedCourse">
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input type="number" name="id" id="id" class="form-control"  [(ngModel)]="selectedCourse.id" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" class="form-control" [(ngModel)]="selectedCourse.description" >
+      </div>
+
+      <div class="form-group">
+        <label for="hours">Hours:</label>
+        <input type="number" name="hours" id="hours" class="form-control" [(ngModel)]="selectedCourse.hours">
+      </div>
+
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" (click)="postCourse(selectedCourse)">
+          <span class="bi bi-pencil-fill">&nbsp;</span>
+          Edit
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</section>

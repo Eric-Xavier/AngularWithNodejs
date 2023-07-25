@@ -13,7 +13,9 @@ import { CourseRegisterComponent } from './components/course/course-register/cou
 import { NotFoundErrorComponent } from './components/error/not-found/not-found.component';
 import { MasterDetailComponent} from './components/masterdetail/masterdetail.component'
 
-import { CourseService } from './services/courses.service'
+import { CourseService } from './services/courses.service';
+import { VerifyHoursPipe } from './filters/verify-hours.pipe'
+import { CourseNameCheckPipe } from './filters/course-name-check.pipe'
 
 
 
@@ -26,7 +28,9 @@ import { CourseService } from './services/courses.service'
     HomeComponent,
     MasterDetailComponent,
 
-    NotFoundErrorComponent
+    NotFoundErrorComponent,
+    VerifyHoursPipe,
+    CourseNameCheckPipe
   ],
   imports: [
     BrowserModule,

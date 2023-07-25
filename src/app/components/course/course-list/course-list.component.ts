@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Pipe } from '@angular/core';
 import { ICourse } from '../../../interfaces/ICourse'
 import { CourseService } from '../../../services/courses.service'
 
