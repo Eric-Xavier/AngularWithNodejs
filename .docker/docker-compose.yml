@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  db:
+    #image: node:lts-alpine
+    hostname: json-server
+    build:
+      context: ./mock
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - "3010:3010"
+      - "3000:3000"
+      - "9229:9229"

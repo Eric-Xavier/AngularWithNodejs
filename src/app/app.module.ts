@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { appRoutes } from './app.routes'
 import { AppComponent } from './app.component';
@@ -36,7 +37,8 @@ import { CourseNameCheckPipe } from './filters/course-name-check.pipe'
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]

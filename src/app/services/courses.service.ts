@@ -1,22 +1,47 @@
+//import { ICourse } from './../interfaces/ICourse';
 import { Injectable } from '@angular/core'
 import { ICourse } from '../interfaces/ICourse';
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs'
+import 'rxjs/ajax'
+
+
 
 @Injectable()
 export class CourseService {
 
-    /**
-     * Get all available courses
-     * @returns
-     */
-    public getCourseList(): ICourse[] {
-        return [
-            { id: 11, description: "Asp.Net MVC", hours: 40 },
-            { id: 12, description: "Java SpringBoot", hours: 40 },
-            { id: 13, description: "Python 2 - With Panda", hours: 60 },
-            { id: 14, description: "Angular", hours: 16 },
-            { id: 15, description: "React", hours: 16 },
-            { id: 16, description: "Vue", hours: 16 },
-            { id: 17, description: "Html, Javascript and CSS", hours: 60 }
-        ];
-    }
+  private _httpClient: HttpClient;
+
+  private _url = "http://localhost:3000/course"
+
+  /**
+   * Service to get data of courses
+   */
+  constructor(httpClient: HttpClient) {
+
+    this._httpClient = httpClient;
+  }
+
+  /**
+   * Get all available courses
+   * @returns Observable<ICourse[]>
+   */
+  public getCourseListAsync(): Observable<ICourse[]> {
+    return this._httpClient.get<ICourse[]>(this._url);
+  }
+
+
+  /**
+   * Post a new course
+   * @returns Observable<ICourse[]>
+   */
+  public postCourse(item:ICourse) : Observable<ICourse>{
+    //let headers = new Headers({'Content-Type': 'application/json'});
+    let headers = {'Content-Type': 'application/json'};
+    let body = JSON.stringify(item);
+
+    return this._httpClient.post<ICourse>(this._url, body, {headers});
+  }
+
+
 }

@@ -9,10 +9,16 @@ import { CourseService } from '../../../services/courses.service'
 
 export class CourseListComponent {
 
-  public list: ICourse[];
+  public list: ICourse[] = [];
 
   constructor(courseService:CourseService) {
-    this.list = courseService.getCourseList();
+
+    courseService.getCourseListAsync()
+    .subscribe({
+      next: (response) => this.list = response,
+      error: (error) => {console.error("CourseService", error); debugger;  alert(error.message)},
+      complete: () => console.log('Get list course executed')
+    });
   }
 
 }
